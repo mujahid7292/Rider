@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryLight">#F592</color>
+    <color name="colorGrey">#e3e3e3</color>
+    <color name="colorBottomText">#f816a463</color>
+    <color name="rippleEffectColor">#6b6b76</color>
+    <color name="colorBtnSignIn">#1fbad6</color>
+    <color name="colorBtnRegister">#83838c</color>
+    <color name="colorBasePress">#FAFAFA</color>
+    <color name="colorBallRelease">#9E9E9E</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color name="textHintColor">#ababac</color>
+    <color name="textBoxSelected">#d3cfcf</color>
+    <color name="black">#000000</color>
+    <color name="uthaoIconColor">#969696</color>
+</resources>

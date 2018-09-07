@@ -1,0 +1,655 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sand_corporation.www.uthaopartner.AccountsActivity.ProfileFragment">
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="@drawable/ic_back_ground"
+            android:id="@+id/signUpForCarLayout"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ic_bg_text_box"
+                    android:padding="8dp"
+                    android:id="@+id/container_layout"
+                    android:orientation="vertical">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/driverProfilePic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:civ_border_width="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        app:civ_border_color="#FF000000"
+                        android:src="@drawable/ic_profile_pic"/>
+                    <TextView
+                        android:id="@+id/txtFullName"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saifullah al Mujahid"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!--Service Type-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/carTypeLinearLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.50"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imgVehicleTypeRideHistorySingle"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:paddingEnd="5dp"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/ic_service_type" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="Service Type"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtServiceType"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="Premium"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/paymentMethodLinearLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.40"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingEnd="5dp"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/ic_map" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="Service Area"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtServiceArea"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="Dhaka"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_license_plate"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:text="Vehicle Registration"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:id="@+id/txtVehicleRegistration"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="Dhaka Metro Ga-14-1342"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_car_in_payment"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:text="Vehicle Model"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:id="@+id/txtVehicleModel"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="Toyoyta Allion (2008)"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_mail"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="145632879"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_mobile"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="145632879"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_location_1"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ADDRESS"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:id="@+id/txtHomeAddress"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_id_card"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NID/PASSPORT"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtNID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:text="1456328799622"
+                                android:textSize="14sp"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_id_card"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DRIVING LICENSE"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtDriverLicense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="145632879"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_documents"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fitness Certificate"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtFitnessCertificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="145632879"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_documents"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tax Token"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <TextView
+                                android:id="@+id/txtTaxToken"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="14sp"
+                                android:text="145632879"
+                                android:background="@android:color/transparent"
+                                android:layout_marginBottom="5dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

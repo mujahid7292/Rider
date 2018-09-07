@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sand_corporation.www.uthaopartner.AccountsActivity.EarningFragment.EarningFragment">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Bar Chart For Total Trip Cost-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartForTotalTripCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.BarChart>
+
+            </LinearLayout>
+
+            <!--Bar Chart For Cash Collected-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartForCashCollected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.BarChart>
+
+            </LinearLayout>
+
+            <!--Bar Chart For Discount Applied-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartForDiscountApplied"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.BarChart>
+
+            </LinearLayout>
+
+            <!--Bar Chart For Uthao Commission After Discount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartForUthaoCommission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.BarChart>
+
+            </LinearLayout>
+
+            <!--Pie Chart For Today-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Earning Today"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.PieChart>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

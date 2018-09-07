@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sand_corporation.www.uthaopartner">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".MyApplication.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+
+        <!-- Put this line of code inside application -->
+        <!-- android:theme="@style/AppTheme" -->
+
+        <activity
+            android:name=".WelcomeActivity.Welcome"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntroSlider.SliderActivity"
+            android:theme="@style/AppTheme" />
+
+        <!-- Below those provider for saving image in internal storage -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.sand_corporation.www.uthaopartner"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".IncomingSMS.IncomingSms"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ForeGroundService.ForeGroundService$NotificationCloseButtonHandler" />
+        <receiver android:name=".GpsTrackerAlarmTrigger.GpsTrackerAlarmTrigger" />
+        <receiver android:name=".ForeGroundService.BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".HomeActivity.Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme" />
+
+        <service android:name=".FirebaseMessaging.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FirebaseMessaging.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".ForeGroundService.ForeGroundService" />
+
+        <meta-data
+            android:name="com.sand_corporation.www.uthaopartner.FirebaseMessaging.notification_channel_one"
+            android:value="@string/notification_channel_one_name" />
+
+        <activity
+            android:name=".FirebaseMessaging.NotificationMsgActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FirebaseMessaging.NotificationWebViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RideHistoryRecyclerView.RideHistoryRecyclerViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RideHistorySinglePage.RideHistorySinglePageActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PromotionBox.PromotionBoxActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NotificationBox.NotificationBoxActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PaymentGateWay.PaymentBoxActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PaymentGateWay.UthaoWalletActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PaymentGateWay.AddPaymentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".HelpBox.HelpBoxActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".SettingsActivity.SettingsActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".AccountsActivity.AccountActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+    </application>
+
+</manifest>

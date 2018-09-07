@@ -1,0 +1,3502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sand_corporation.www.uthaopartner.WelcomeActivity.Welcome">
+
+    <!--Welcome Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/welcome_layout"
+        android:background="@drawable/ic_back_ground"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="180dp"
+            android:id="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/uthao_logo"
+                android:src="@drawable/ic_inside_logo"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/linearLayout2"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_below="@id/linearLayout1">
+
+            <Button
+                android:id="@+id/btnDriverLogInWelcome"
+                android:textColor="@android:color/white"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnDriverRegistration"
+                android:textColor="@android:color/white"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--Driver Sign in Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:id="@+id/driverSignInUsingEmailPasswordLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign9"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign In"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/ic_bg_text_box">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_mail"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EMAIL"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginEnd="5dp" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/edtSignInEmail"
+                                android:textColor="@android:color/white"
+                                android:hint="Enter email"
+                                android:inputType="textEmailAddress"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:textSize="16sp"
+                                android:background="@android:color/transparent"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:src="@drawable/ic_under_line"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_profile_pic"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"
+                                android:text="Password"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/edtSignInPassword"
+                                android:textColor="@android:color/white"
+                                android:hint="Enter Name"
+                                android:textColorHint="@color/colorTransparentWhite"
+                                android:inputType="text"
+                                android:textSize="16sp"
+                                android:background="@android:color/transparent"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:src="@drawable/ic_under_line"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnSignInUsingEmailPassword"
+                        android:text="Sign In"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/btn_background_white_transparent"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <Button
+                        android:id="@+id/btnBackToAllAccountPage1"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@android:color/white"
+                        android:text="Back"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/btn_background_white_transparent"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Driver Registration Phone Verification Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/driverRegistrationPhoneVerificationLayout"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign8"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/ic_bg_text_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_mobile"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PHONE:"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/edtRegistrationCountryCode"
+                                    android:text="+88"
+                                    android:layout_marginRight="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
+                                    android:textAlignment="center"
+                                    android:inputType="text|phone"
+                                    android:textSize="16sp"
+                                    android:textColor="@android:color/white"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@android:color/transparent"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:src="@drawable/ic_under_line"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/edtRegistrationPhoneNumber"
+                                    android:textAlignment="center"
+                                    android:inputType="text|phone"
+                                    android:textSize="16sp"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="@android:color/white"
+                                    android:background="@android:color/transparent"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:src="@drawable/ic_under_line"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVerifyRegistrationPhoneNumber"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@android:color/white"
+                    android:text="Verify"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Driver Registration OTP Layout-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/driverRegistrationOTPLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign4"
+                android:src="@drawable/ic_back_sign"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/ic_bg_text_box">
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:inputType="text"
+                android:hint="Enter OTP Here"
+                android:textSize="16sp"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:id="@+id/edtRegistrationEnterOTP" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_under_line">
+
+            </ImageView>
+
+            <Button
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Verify"
+                android:textColor="@android:color/white"
+                android:id="@+id/btnVerifyRegistrationOTPNumber"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_background_white_transparent"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--Select Your City Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/select_city_layout"
+        android:orientation="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Your City"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/ic_bg_text_box"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSelectDhaka"
+                android:textColor="@android:color/white"
+                android:text="DHAKA"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnSelectChittagong"
+                android:textColor="@android:color/white"
+                android:text="CHITTAGONG"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSelectSylhet"
+                android:textColor="@android:color/white"
+                android:text="SYLHET"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Select Vehicle Type Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/select_vehicle_type_layout"
+        android:orientation="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign1"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Vehicle Type"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/ic_bg_text_box"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSelectCar"
+                android:textColor="@android:color/white"
+                android:text="CAR"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnSelectBike"
+                android:textColor="@android:color/white"
+                android:text="BIKE"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background_white_transparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Driver Email Password Registration Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/driverRegisterUsingEmailPasswordLayOut"
+        android:background="@drawable/ic_bg_screen"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign6"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/ic_bg_text_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_mail"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EMAIL"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtRegisterEmail"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="2dp"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter email"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_profile_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:text="Password"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="2dp"
+                            android:id="@+id/edtRegisterPassword"
+                            android:textColor="@android:color/white"
+                            android:hint="Password minimum 6 digit"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRegistrationUsingEmailPassword"
+                    android:text="Sign Up"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Sign Up For Car Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:id="@+id/signUpForCarLayout"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign2"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up For Car"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/ic_bg_text_box"
+                android:padding="8dp"
+                android:id="@+id/container_layout"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/driverProfilePic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:civ_border_width="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    app:civ_border_color="#FF000000"
+                    android:src="@drawable/ic_profile_pic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_profile_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:text="NAME *"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:id="@+id/driverFullNameField"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter Name"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_id_card"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NID/PASSPORT *"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:id="@+id/driverNIDField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your NID or Passport number"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_id_card"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DRIVING LICENSE *"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:id="@+id/driverLicenseField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your valid driving license"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_location_1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ADDRESS"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:id="@+id/driverHomeAddressField"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your home address"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--TabHost for Car detail info and document-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabHost
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tabHostForCar">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/ic_bg_text_box">
+                            </TabWidget>
+
+                            <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/tab1"
+                                    android:background="@android:color/transparent"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <!--Car Info Layout-->
+                                    <!--Start-->
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:scrollbars="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <!--Select Manufacturer-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerCarManufacturer"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:scrollbarStyle="insideOverlay"
+                                                    android:prompt="@string/select_car_manufacturer"
+                                                    android:entries="@array/car_manufacturer_arrays"
+                                                    android:layout_marginStart="10dp" />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Select Model-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerCarModel"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:entries="@array/car_model_arrays"
+                                                    android:prompt="@string/select_car_model"
+                                                    android:layout_marginStart="10dp" />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Select Year-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerCarProductionYear"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginStart="10dp"
+                                                    android:entries="@array/vehicle_production_year_arrays"
+                                                    android:prompt="@string/select_vehicle_production_year"
+                                                     />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Car Registration number-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Car Registration number"
+                                                        android:textSize="16sp"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:textColor="@android:color/white"
+                                                        android:layout_marginLeft="20dp"
+                                                        android:layout_marginStart="20dp"/>
+
+
+
+                                                </LinearLayout>
+                                                <Spinner
+                                                    android:id="@+id/spinnerRegistrationAuthority"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="32dp"
+                                                    android:layout_marginStart="32dp"
+                                                    android:entries="@array/vehicle_registration_authority_arrays"
+                                                    android:prompt="@string/select_vehicle_registration_authority">
+
+                                                </Spinner>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/carRegistrationAlphabet"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="GA"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/carRegistrationFirstTwoDigit"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="14"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/carRegistrationLastFourDigit"
+                                                            android:layout_width="60dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="1342"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <!--Fitness Certificate-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="22dp"
+                                                        android:layout_marginStart="22dp"
+                                                        android:text="Fitness Certificate *"
+                                                        android:textSize="16sp"
+                                                        android:textColor="@android:color/white"/>
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_marginEnd="10dp">
+
+                                                    <EditText
+                                                        android:id="@+id/carFitnessCertificateNumber"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:textSize="16sp"
+                                                        android:background="@android:color/transparent"
+                                                        android:hint="Enter car fitness certificate number"
+                                                        android:textColor="@android:color/white"
+                                                        android:textColorHint="@color/colorTransparentWhite"/>
+
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="2dp"
+                                                        android:src="@drawable/ic_under_line"/>
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+
+                                            <!--Tax Token-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="22dp"
+                                                        android:layout_marginStart="22dp"
+                                                        android:text="Tax Token *"
+                                                        android:textSize="16sp"
+                                                        android:textColor="@android:color/white"/>
+
+
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_marginEnd="10dp">
+
+                                                    <EditText
+                                                        android:id="@+id/carTaxTokenNumber"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:textSize="16sp"
+                                                        android:hint="Enter car tax token number"
+                                                        android:background="@android:color/transparent"
+                                                        android:textColor="@android:color/white"
+                                                        android:textColorHint="@color/colorTransparentWhite"/>
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="2dp"
+                                                        android:src="@drawable/ic_under_line"/>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <!--Referral Code-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="22dp"
+                                                        android:layout_marginStart="22dp"
+                                                        android:textSize="16sp"
+                                                        android:text="Referral Code"
+                                                        android:textColor="@android:color/white"/>
+
+
+
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_marginEnd="10dp">
+
+                                                    <EditText
+                                                        android:id="@+id/referralCode"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:textSize="16sp"
+                                                        android:background="@android:color/transparent"
+                                                        android:hint="Enter referral code number"
+                                                        android:textColor="@android:color/white"
+                                                        android:textColorHint="@color/colorTransparentWhite"/>
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="2dp"
+                                                        android:src="@drawable/ic_under_line"/>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+
+
+                                        </LinearLayout>
+
+                                    </ScrollView>
+
+                                    <!--Car Info Layout-->
+                                    <!--End-->
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tab2"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16sp"
+                                        android:text="Before going to upload document page, Please make sure that you have below documents in your site and you have approximately 100MB mobile data to upload those document"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Driving License"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="NID Front Side"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="NID Back Side"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Car Fitness Certificate"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Car Tax Token"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Car Registration Paper"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/btnGoToUploadDocumentPageForCar"
+                                        android:textColor="@android:color/white"
+                                        android:text="GO TO UPLOAD DOCUMENT"
+                                        android:textAllCaps="false"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:background="@drawable/btn_background_white_transparent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                    </TabHost>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Scanned Document layout For Car-->
+    <LinearLayout
+        android:id="@+id/scannedDocumentsUploadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/ic_back_ground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign10"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Documents"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="@drawable/ic_bg_text_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Scanned Driving License-->
+                <LinearLayout
+                    android:id="@+id/scannedDrivingLicenseLayoutForCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Scanned Driving License"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusDrivingLicenseForCar"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--NID Front Side-->
+                <LinearLayout
+                    android:id="@+id/nidFrontSideLayoutForCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="NID Front Side"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusNIDFrontSideForCar"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--NID Back Side-->
+                <LinearLayout
+                    android:id="@+id/nidBackSideLayoutForCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="NID Back Side"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusNIDBackSideForCar"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Car Fitness Certificate-->
+                <LinearLayout
+                    android:id="@+id/carFitnessCertificateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Car Fitness Certificate"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusCarFitness"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Car Tax Token-->
+                <LinearLayout
+                    android:id="@+id/carTaxTokenLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Car Tax Token"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusCarTaxToken"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Car Registration Paper-->
+                <LinearLayout
+                    android:id="@+id/carRegistrationPaperLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Car Registration Paper"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusCarRegistration"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Go To Add Payment Details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Button
+                        android:id="@+id/btnAddPaymentDetails"
+                        android:visibility="gone"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"
+                        android:text="ADD PAYMENT DETAILS"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_background_white_transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--Sign Up For Bike Layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:id="@+id/signUpForBikeLayout"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/ic_back_sign14"
+                    android:src="@drawable/ic_back_sign"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up For Bike"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_marginRight="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/ic_bg_text_box"
+                android:padding="8dp"
+                android:id="@+id/container_layout1"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/bikerProfilePic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:civ_border_width="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    app:civ_border_color="#FF000000"
+                    android:src="@drawable/ic_profile_pic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_profile_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:text="NAME *"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:id="@+id/bikerFullNameField"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter Name"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_id_card"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NID/PASSPORT *"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:id="@+id/bikerNIDField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your NID / Passport number"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_id_card"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DRIVING LICENSE *"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:id="@+id/bikerLicenseField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your valid driving license"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_location_1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ADDRESS"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="5dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:id="@+id/bikerHomeAddressField"
+                            android:textColor="@android:color/white"
+                            android:hint="Enter your home address"
+                            android:textColorHint="@color/colorTransparentWhite"
+                            android:inputType="text"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginBottom="5dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--TabHost for Bike detail info and document-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabHost
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tabHostForBike">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/ic_bg_text_box">
+                            </TabWidget>
+
+                            <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/tabbiker1"
+                                    android:background="@android:color/transparent"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp">
+
+                                    <!--Car Info Layout-->
+                                    <!--Start-->
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:scrollbars="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <!--Select Manufacturer-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerBikeManufacturer"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:scrollbarStyle="insideOverlay"
+                                                    android:prompt="@string/select_car_manufacturer"
+                                                    android:entries="@array/car_manufacturer_arrays"
+                                                    android:layout_marginStart="10dp" />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Select Model-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerBikeModel"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:entries="@array/car_model_arrays"
+                                                    android:prompt="@string/select_car_model"
+                                                    android:layout_marginStart="10dp" />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Select Year-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:visibility="visible"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="10dp"
+                                                    android:layout_height="10dp"
+                                                    android:layout_marginLeft="12dp"
+                                                    android:layout_marginStart="12dp"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:src="@drawable/ic_box_grey"/>
+
+                                                <Spinner
+                                                    android:id="@+id/spinnerBikeProductionYear"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginStart="10dp"
+                                                    android:entries="@array/vehicle_production_year_arrays"
+                                                    android:prompt="@string/select_vehicle_production_year"
+                                                    />
+
+
+
+                                            </LinearLayout>
+
+                                            <!--Bike Registration number-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Bike Registration number"
+                                                        android:textSize="16sp"
+                                                        android:textColor="@android:color/white"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:layout_marginLeft="20dp"
+                                                        android:layout_marginStart="20dp"/>
+
+
+
+                                                </LinearLayout>
+                                                <Spinner
+                                                    android:id="@+id/spinnerBikeRegistrationAuthority"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:layout_marginLeft="35dp"
+                                                    android:layout_marginStart="35dp"
+                                                    android:layout_marginBottom="5dp"
+                                                    android:entries="@array/vehicle_registration_authority_arrays"
+                                                    android:prompt="@string/select_vehicle_registration_authority">
+
+                                                </Spinner>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/bikeRegistrationAlphabet"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="GA"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/bikeRegistrationFirstTwoDigit"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="14"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginRight="10dp"
+                                                        android:layout_marginEnd="10dp">
+
+                                                        <EditText
+                                                            android:id="@+id/bikeRegistrationLastFourDigit"
+                                                            android:layout_width="60dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:hint="1342"
+                                                            android:textSize="16sp"
+                                                            android:textColor="@android:color/white"
+                                                            android:textColorHint="@color/colorTransparentWhite"
+                                                            android:background="@android:color/transparent"/>
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="2dp"
+                                                            android:src="@drawable/ic_under_line"/>
+                                                    </LinearLayout>
+
+
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+
+                                            <!--Referral Code-->
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:visibility="visible"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="10dp"
+                                                        android:layout_height="10dp"
+                                                        android:layout_marginLeft="12dp"
+                                                        android:layout_marginStart="12dp"
+                                                        android:gravity="center_vertical"
+                                                        android:layout_marginTop="5dp"
+                                                        android:src="@drawable/ic_box_grey"/>
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="22dp"
+                                                        android:layout_marginStart="22dp"
+                                                        android:text="Referral Code"
+                                                        android:textSize="16sp"
+                                                        android:textColor="@android:color/white"/>
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:layout_marginLeft="45dp"
+                                                    android:layout_marginStart="45dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_marginEnd="10dp">
+
+                                                    <EditText
+                                                        android:id="@+id/bikeReferralCode"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="5dp"
+                                                        android:textSize="16sp"
+                                                        android:hint="Enter referral code number"
+                                                        android:background="@android:color/transparent"
+                                                        android:textColor="@android:color/white"
+                                                        android:textColorHint="@color/colorTransparentWhite"/>
+
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:src="@drawable/ic_under_line"/>
+                                                </LinearLayout>
+
+
+                                            </LinearLayout>
+
+
+
+                                        </LinearLayout>
+
+                                    </ScrollView>
+
+                                    <!--Car Info Layout-->
+                                    <!--End-->
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tabbiker2"
+                                    android:background="@android:color/transparent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="16sp"
+                                        android:text="Before going to upload document page, Please make sure that you have below documents in your site and you have approximately 20MB mobile data to upload those document"/>
+
+                                    <!--Driving License-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Driving License"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <!--NID / PASSPORT Side-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="NID / PASSPORT"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <!--Bike Registration Paper-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginStart="12dp"
+                                            android:gravity="center_vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_box_grey"/>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="22dp"
+                                            android:layout_marginStart="22dp"
+                                            android:text="Bike Registration Paper"
+                                            android:textSize="16sp"
+                                            android:textColor="@android:color/white"/>
+
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/btnGoToUploadDocumentPageForBike"
+                                        android:textColor="@android:color/white"
+                                        android:text="GO TO UPLOAD DOCUMENT"
+                                        android:textAllCaps="false"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:background="@drawable/btn_background_white_transparent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                    </TabHost>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Scanned Document layout For Bike-->
+    <LinearLayout
+        android:id="@+id/scannedDocumentsUploadLayoutForBike"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/ic_back_ground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign15"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Documents"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="@drawable/ic_bg_text_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Scanned Driving License-->
+                <LinearLayout
+                    android:id="@+id/scannedDrivingLicenseLayoutForBike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Scanned Driving License"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusDrivingLicenseForBike"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--NID Front Side-->
+                <LinearLayout
+                    android:id="@+id/nidFrontSideLayoutForBike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="NID Front Side"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusNIDFrontSideForBike"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--NID Back Side-->
+                <LinearLayout
+                    android:id="@+id/nidBackSideLayoutForBike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="NID Back Side"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusNIDBackSideForBike"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Bike Registration Paper-->
+                <LinearLayout
+                    android:id="@+id/bikeRegistrationPaperLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Bike Registration Paper"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"/>
+
+                        <ImageView
+                            android:id="@+id/imgDocumentUploadStatusBikeRegistration"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_under_line"/>
+
+                </LinearLayout>
+
+                <!--Go To Add Payment Details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <Button
+                        android:id="@+id/btnAddPaymentDetailsForBike"
+                        android:visibility="gone"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"
+                        android:text="ADD PAYMENT DETAILS"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_background_white_transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <!--Choose From Gallery or Take New Photo Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/chooseFromGalleryOrTakePhoto"
+        android:background="@drawable/ic_back_ground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/header">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign12"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Documents"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/header"
+            android:background="@drawable/ic_bg_text_box">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtAdviceAboutTakingPhotoOfDocumentsHeader"
+                    android:text="@string/txtAdviceAboutTakingPhotoOfDocumentsHeader"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtAdviceAboutTakingPhotoOfDocumentsBody"
+                    android:text="@string/txtAdviceAboutTakingPhotoOfDocumentsBody"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_margin="10dp">
+
+                <Button
+                    android:id="@+id/btnTakePhoto"
+                    android:textColor="@android:color/white"
+                    android:text="TAKE PHOTO"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btnUploadFromGallery"
+                    android:textColor="@android:color/white"
+                    android:text="UPLOAD FROM DEVICE"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:background="@drawable/btn_background_white_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <!--Preview documents and upload Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/previewAndUploadLayout"
+        android:orientation="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign3"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/txtScannedPhotoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scanned Photo"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_text_box"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="10dp"
+                        android:id="@+id/imgLayOut"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imgScannedDocumentShownByGlide"/>
+
+                        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                            <!--android:id="@+id/imgScannedDocumentShownByFresco"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="500dp"-->
+                            <!--/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/imgLayOut"
+                        android:weightSum="10"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentBottom="true">
+
+                        <Button
+                            android:id="@+id/btnDiscardPhoto"
+                            android:textColor="@android:color/white"
+                            android:text="DISCARD"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/btn_background_white_transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <Button
+                            android:id="@+id/btnUploadPhotoToServer"
+                            android:textColor="@android:color/white"
+                            android:text="UPLOAD TO SERVER"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/btn_background_white_transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--Add bKash number-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addbKashNumber"
+        android:orientation="vertical"
+        android:background="@drawable/ic_back_ground"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ic_back_sign13"
+                android:src="@drawable/ic_back_sign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add bKash Number"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="40dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_text_box"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    android:id="@+id/bKashNumberLayOut">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_bkash"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtBkashNumber"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/transparent"
+                            android:textColor="@android:color/white"
+                            android:hint="01749-000000"
+                            android:textSize="18sp"
+                            android:textColorHint="@color/colorTransparentWhite"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_under_line"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="30dp">
+
+                    <Button
+                        android:id="@+id/btnUploadbKashNumber"
+                        android:textColor="@android:color/white"
+                        android:text="OK"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_background_white_transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

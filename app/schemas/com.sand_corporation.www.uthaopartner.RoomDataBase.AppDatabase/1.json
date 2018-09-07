@@ -1,0 +1,979 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "10d50c586b3936f679f7969f5129600b",
+    "entities": [
+      {
+        "tableName": "MoneyReceipt",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rideId` TEXT NOT NULL, `Ride_End_Time` INTEGER NOT NULL, `Ride_Start_Time` INTEGER NOT NULL, `Ride_Accept_Time` INTEGER NOT NULL, `Customer_Drop_Time` INTEGER NOT NULL, `DriverUID` TEXT, `Driver_Name` TEXT, `CustomerUID` TEXT, `Customer_Name` TEXT, `Customer_Profile_Pic` TEXT, `Payment_Method_Used` TEXT, `PickUp_Location_Address` TEXT, `Destination_Location_Address` TEXT, `Encoded_Path` TEXT, `Customer_Rating_By_Driver` INTEGER NOT NULL, `Driver_Rating_By_Customer` INTEGER NOT NULL, `Distance_Fair` REAL NOT NULL, `Waiting_Time_Fair` REAL NOT NULL, `Total_Payment` REAL NOT NULL, `Customer_Drop_Distance` REAL NOT NULL, `Customer_PickUp_Distance` REAL NOT NULL, `Discount_In_Percentage` REAL NOT NULL, `Discount_Amount_Upto` REAL NOT NULL, `Demand_Charge_Percentage` REAL NOT NULL, `Service_Type` TEXT, PRIMARY KEY(`rideId`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "rideId",
+            "columnName": "rideId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rideEndTime",
+            "columnName": "Ride_End_Time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rideStartTime",
+            "columnName": "Ride_Start_Time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rideAcceptTime",
+            "columnName": "Ride_Accept_Time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerDropTime",
+            "columnName": "Customer_Drop_Time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driverName",
+            "columnName": "Driver_Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerUid",
+            "columnName": "CustomerUID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerName",
+            "columnName": "Customer_Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerProfilePic",
+            "columnName": "Customer_Profile_Pic",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "paymentMethod",
+            "columnName": "Payment_Method_Used",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pickUpLocationAddress",
+            "columnName": "PickUp_Location_Address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "destinationLocationAddress",
+            "columnName": "Destination_Location_Address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "encodedPath",
+            "columnName": "Encoded_Path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerRatingByDriver",
+            "columnName": "Customer_Rating_By_Driver",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driverRatingByCustomer",
+            "columnName": "Driver_Rating_By_Customer",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distanceFair",
+            "columnName": "Distance_Fair",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waitingTimeFair",
+            "columnName": "Waiting_Time_Fair",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalPayment",
+            "columnName": "Total_Payment",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerDropDistance",
+            "columnName": "Customer_Drop_Distance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerPickUpDistance",
+            "columnName": "Customer_PickUp_Distance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discountInPercentage",
+            "columnName": "Discount_In_Percentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discountAmountUptoTaka",
+            "columnName": "Discount_Amount_Upto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "demandChargeInPercentage",
+            "columnName": "Demand_Charge_Percentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "serviceType",
+            "columnName": "Service_Type",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rideId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_MoneyReceipt_rideId",
+            "unique": false,
+            "columnNames": [
+              "rideId"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_rideId` ON `${TABLE_NAME}` (`rideId`)"
+          },
+          {
+            "name": "index_MoneyReceipt_rideId_Ride_End_Time",
+            "unique": false,
+            "columnNames": [
+              "rideId",
+              "Ride_End_Time"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_rideId_Ride_End_Time` ON `${TABLE_NAME}` (`rideId`, `Ride_End_Time`)"
+          },
+          {
+            "name": "index_MoneyReceipt_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "MoneyReceiptEdited",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rideId` TEXT NOT NULL, `Edited_Ride_Distance` REAL NOT NULL, `Edited_Distance_Fair` REAL NOT NULL, `Edited_Total_Payment` REAL NOT NULL, `Edited_Encoded_Path` TEXT, `Discount_In_Percentage` REAL NOT NULL, `Demand_Charge_Percentage` REAL NOT NULL, PRIMARY KEY(`rideId`), FOREIGN KEY(`rideId`) REFERENCES `MoneyReceipt`(`rideId`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "rideId",
+            "columnName": "rideId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "editedRideDistance",
+            "columnName": "Edited_Ride_Distance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "editedDistanceFair",
+            "columnName": "Edited_Distance_Fair",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "EditedTotalPayment",
+            "columnName": "Edited_Total_Payment",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "editedEncodedPath",
+            "columnName": "Edited_Encoded_Path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "discountInPercentage",
+            "columnName": "Discount_In_Percentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "demandChargeInPercentage",
+            "columnName": "Demand_Charge_Percentage",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rideId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_MoneyReceiptEdited_rideId",
+            "unique": false,
+            "columnNames": [
+              "rideId"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceiptEdited_rideId` ON `${TABLE_NAME}` (`rideId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "MoneyReceipt",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "rideId"
+            ],
+            "referencedColumns": [
+              "rideId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "BasicInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `vehicle_manufacturer` TEXT, `vehicle_model` TEXT, `vehicle_registration_authority` TEXT, `vehicle_fitness_number` TEXT, `vehicle_registration_number` TEXT, `vehicle_tax_token_number` TEXT, `email` TEXT, `full_name` TEXT, `home_address` TEXT, `driving_license` TEXT, `nid` TEXT, `registration_city` TEXT, `vehicle_type` TEXT, `driverOrBiker` TEXT, `mobile` TEXT, `serviceType` TEXT, `vehicle_production_year` TEXT, PRIMARY KEY(`DriverUID`))",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicle_manufacturer",
+            "columnName": "vehicle_manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_model",
+            "columnName": "vehicle_model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_registration_authority",
+            "columnName": "vehicle_registration_authority",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_fitness_number",
+            "columnName": "vehicle_fitness_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_registration_number",
+            "columnName": "vehicle_registration_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_tax_token_number",
+            "columnName": "vehicle_tax_token_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "full_name",
+            "columnName": "full_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "home_address",
+            "columnName": "home_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driving_license",
+            "columnName": "driving_license",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nid",
+            "columnName": "nid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "registration_city",
+            "columnName": "registration_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_type",
+            "columnName": "vehicle_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driverOrBiker",
+            "columnName": "driverOrBiker",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "mobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "serviceType",
+            "columnName": "serviceType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_production_year",
+            "columnName": "vehicle_production_year",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ProfilePic",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `Profile_Pic` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Profile_Pic",
+            "columnName": "Profile_Pic",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_ProfilePic_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_ProfilePic_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "BankingInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `BKash_Number` TEXT, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "BKash_Number",
+            "columnName": "BKash_Number",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_BankingInfo_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_BankingInfo_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "DrivingLicense",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `Driving_License` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Driving_License",
+            "columnName": "Driving_License",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_DrivingLicense_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_DrivingLicense_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "NIDFRONT",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `NID_FRONT` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "NID_FRONT",
+            "columnName": "NID_FRONT",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_NIDFRONT_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_NIDFRONT_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "NIDBACK",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `NID_BACK` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "NID_BACK",
+            "columnName": "NID_BACK",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_NIDBACK_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_NIDBACK_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "RegPaper",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `REGISTRATION_PAPER` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "REGISTRATION_PAPER",
+            "columnName": "REGISTRATION_PAPER",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_RegPaper_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_RegPaper_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FITNESS",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `FITNESS_CERTIFICATE` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "FITNESS_CERTIFICATE",
+            "columnName": "FITNESS_CERTIFICATE",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_FITNESS_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_FITNESS_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "TaxToken",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DriverUID` TEXT NOT NULL, `TAX_TOKEN` BLOB, PRIMARY KEY(`DriverUID`), FOREIGN KEY(`DriverUID`) REFERENCES `BasicInfo`(`DriverUID`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "DriverUID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "TAX_TOKEN",
+            "columnName": "TAX_TOKEN",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "DriverUID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_TaxToken_DriverUID",
+            "unique": false,
+            "columnNames": [
+              "DriverUID"
+            ],
+            "createSql": "CREATE  INDEX `index_TaxToken_DriverUID` ON `${TABLE_NAME}` (`DriverUID`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "DriverUID"
+            ],
+            "referencedColumns": [
+              "DriverUID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "CustomerPickUpLatLng",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rowNumber` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Latitude` REAL NOT NULL, `Longitude` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "rowNumber",
+            "columnName": "rowNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "Latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "Longitude",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rowNumber"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "AssignedCustomerTripDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tripDetailsRowNumber` INTEGER NOT NULL, `CustomerDestinationAddress` TEXT, `CustomerPickUpAddress` TEXT, `CustomerDestinationLat` REAL NOT NULL, `CustomerDestinationLng` REAL NOT NULL, `CustomerPickUpLat` REAL NOT NULL, `CustomerPickUpLng` REAL NOT NULL, `Promo_Code` TEXT, `Surcharge_Amount` REAL NOT NULL, PRIMARY KEY(`tripDetailsRowNumber`), FOREIGN KEY(`tripDetailsRowNumber`) REFERENCES `AssignedCustomerInfo`(`infoRowNumber`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "tripDetailsRowNumber",
+            "columnName": "tripDetailsRowNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerDestinationAddress",
+            "columnName": "CustomerDestinationAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerPickUpAddress",
+            "columnName": "CustomerPickUpAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerDestinationLat",
+            "columnName": "CustomerDestinationLat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerDestinationLng",
+            "columnName": "CustomerDestinationLng",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerPickUpLat",
+            "columnName": "CustomerPickUpLat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerPickUpLng",
+            "columnName": "CustomerPickUpLng",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "promoCode",
+            "columnName": "Promo_Code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "surchargeAmount",
+            "columnName": "Surcharge_Amount",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "tripDetailsRowNumber"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_AssignedCustomerTripDetails_tripDetailsRowNumber",
+            "unique": false,
+            "columnNames": [
+              "tripDetailsRowNumber"
+            ],
+            "createSql": "CREATE  INDEX `index_AssignedCustomerTripDetails_tripDetailsRowNumber` ON `${TABLE_NAME}` (`tripDetailsRowNumber`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "AssignedCustomerInfo",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "tripDetailsRowNumber"
+            ],
+            "referencedColumns": [
+              "infoRowNumber"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "AssignedCustomerInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`infoRowNumber` INTEGER NOT NULL, `Customer_UID` TEXT, `Customer_FCMToken` TEXT, `Customer_Name` TEXT, `Customer_Mobile` TEXT, `Customer_Ratings` TEXT, `Customer_Total_Trips` TEXT, `Customer_FaceBook_PP` TEXT, `Customer_Profile_Pic_Url` TEXT, PRIMARY KEY(`infoRowNumber`))",
+        "fields": [
+          {
+            "fieldPath": "infoRowNumber",
+            "columnName": "infoRowNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerUID",
+            "columnName": "Customer_UID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerFCMToken",
+            "columnName": "Customer_FCMToken",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerName",
+            "columnName": "Customer_Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerMobile",
+            "columnName": "Customer_Mobile",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerRatings",
+            "columnName": "Customer_Ratings",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerTotalTrips",
+            "columnName": "Customer_Total_Trips",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerFaceBookPP",
+            "columnName": "Customer_FaceBook_PP",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerProfilePicUrl",
+            "columnName": "Customer_Profile_Pic_Url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "infoRowNumber"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"10d50c586b3936f679f7969f5129600b\")"
+    ]
+  }
+}

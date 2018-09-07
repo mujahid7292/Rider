@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "664650979852",
+    "firebase_url": "https://uthao-2b7a7.firebaseio.com",
+    "project_id": "uthao-2b7a7",
+    "storage_bucket": "uthao-2b7a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664650979852:android:226fbf16bb136719",
+        "android_client_info": {
+          "package_name": "com.sand_corporation.www.uthao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664650979852-avof9omv2s8gnmc33tudvfmtv29q4ikg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sand_corporation.www.uthao",
+            "certificate_hash": "f451b929b5fc38a91897c2999e78b9f593eaf5a3"
+          }
+        },
+        {
+          "client_id": "664650979852-f4jpdsgni6dmk0k0s01sh9a8o5uu6m7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sand_corporation.www.uthao",
+            "certificate_hash": "f13b23d54afd0737bb4d9003faff1b086b8b20f2"
+          }
+        },
+        {
+          "client_id": "664650979852-eiu81kjmjf98vvbhr7gds5ej5v46p3d8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sand_corporation.www.uthao",
+            "certificate_hash": "66600a309a18d33335a08df4b53d2914e99c556a"
+          }
+        },
+        {
+          "client_id": "664650979852-orcqtu2d33kils5njlskqlsmhqj2k12l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH47aKG5maubqA2F-A8wiF-b2yi3wCEZw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664650979852-orcqtu2d33kils5njlskqlsmhqj2k12l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664650979852:android:8c3b8b38d2d0091c",
+        "android_client_info": {
+          "package_name": "com.sand_corporation.www.uthaopartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664650979852-glp15ahef1fda7o8fbjtvllmhn4ua751.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sand_corporation.www.uthaopartner",
+            "certificate_hash": "66600a309a18d33335a08df4b53d2914e99c556a"
+          }
+        },
+        {
+          "client_id": "664650979852-orcqtu2d33kils5njlskqlsmhqj2k12l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH47aKG5maubqA2F-A8wiF-b2yi3wCEZw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664650979852-orcqtu2d33kils5njlskqlsmhqj2k12l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

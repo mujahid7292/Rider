@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Uthao Partner</string>
+
+    <string name="select_car_manufacturer">SELECT MANUFACTURER *</string>
+    <string-array name="car_manufacturer_arrays">
+        <item>SELECT MANUFACTURER *</item>
+        <item>Toyota</item>
+        <item>Nissan</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Mitsubishi</item>
+        <item>Ford</item>
+        <item>Great Wall</item>
+    </string-array>
+
+    <string name="select_car_model">SELECT MODEL *</string>
+    <string-array name="car_model_arrays">
+        <item>SELECT MODEL *</item>
+        <item>Toyota</item>
+        <item>Nissan</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Mitsubishi</item>
+        <item>Ford</item>
+        <item>Great Wall</item>
+    </string-array>
+
+    <string name="select_vehicle_production_year">SELECT YEAR *</string>
+    <string-array name="vehicle_production_year_arrays">
+        <item>SELECT YEAR *</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+    </string-array>
+
+    <string name="select_vehicle_registration_authority">SELECT AUTHORITY *</string>
+    <string-array name="vehicle_registration_authority_arrays">
+        <item>SELECT AUTHORITY *</item>
+        <item>DHAKA METRO</item>
+        <item>CHITTAGONG METRO</item>
+        <item>SYLHET METRO</item>
+    </string-array>
+    <string name="money_receipt">Money Receipt</string>
+    <string name="complain">Complain</string>
+    <string name="car_info">Car Info</string>
+    <string name="scanned_documents">Scanned Documents</string>
+    <string name="documents">Documents</string>
+    <string name="txtAdviceAboutTakingPhotoOfDocumentsHeader">Take a photo of your documents</string>
+    <string name="txtAdviceAboutTakingPhotoOfDocumentsBody">Ensure all information</string>
+
+    <string name="permission_preference">PERMISSION_PREFERENCE</string>
+    <string name="permission_read_phone_state">PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_write_external_storage">PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_read_external_storage">PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_contacts">PERMISSION_CONTACTS</string>
+    <string name="permission_fine_location">PERMISSION_FINE_LOCATION</string>
+    <string name="permission_coarse_location">PERMISSION_COARSE_LOCATION</string>
+    <string name="permission_send_sms">PERMISSION_SEND_SMS</string>
+    <string name="permission_read_sms">PERMISSION_READ_SMS</string>
+    <string name="permission_receive_sms">PERMISSION_RECEIVE_SMS</string>
+    <string name="network_not_enabled">GPS IS DISABLED</string>
+    <string name="title_activity_home">Map</string>
+    <string name="bike_info">Bike Info</string>
+    <string name="select_bike_manufacturer">SELECT BIKE MANUFACTURER</string>
+    <string name="select_bike_model">SELECT BIKE MODEL</string>
+
+
+
+    <string name="browser_key_1">AIzaSyAKQkJtzNwVmOYuVGn3QForRN7wRkAkiPU</string>
+    <string name="notification_channel_one_name">customer_call</string>
+    <string name="notification_channel_one_description">customer_call</string>
+    <string name="notification_channel_two_name">uthao_company</string>
+    <string name="notification_channel_two_description">uthao_company</string>
+    <string name="default_notification_channel_id">customer_call</string>
+    <string name="ongoing_notification_title">Uthao partner</string>
+    <string name="ongoing_notification_message">Uthao partner</string>
+    <string name="ongoing_notification_ticker_text">Uthao</string>
+    <string name="go_to_location_settings_manually">Go to location settings manually</string>
+    <string name="shut_down_app">Shut Down App</string>
+    <string name="Customer_Denied_Location">Location Update Denied</string>
+    <string name="SHUT_DOWN_THIS_APP">Shut Down</string>
+    <string name="Please_Allow_GPS_Connection">Please allow GPS connection</string>
+    <string name="Allow_GPS">Allow GPS</string>
+    <string name="foreGroundNotificationName">ForeGround Notification</string>
+    <string name="foreGroundNotificationDescription">ForeGround Notification</string>
+
+
+    <string name="ride_history">পূর্বের রাইড সমূহ</string>
+    <string name="promotions">প্রচার</string>
+    <string name="notification">প্রজ্ঞাপন</string>
+    <string name="payment">পেমেন্ট</string>
+    <string name="help">সাহায্য</string>
+    <string name="settings">সেটিংস</string>
+    <string name="language">English</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="Profile">Profile</string>
+    <string name="Earnings">Earnings</string>
+    <string name="Ratings">Ratings</string>
+    <string name="Account">Account</string>
+</resources>

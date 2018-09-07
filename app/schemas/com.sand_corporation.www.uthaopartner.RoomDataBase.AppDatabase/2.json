@@ -1,0 +1,289 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "b0df470e493f75ba2764e93e141fdab4",
+    "entities": [
+      {
+        "tableName": "MoneyReceipt",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rideId` TEXT NOT NULL, `rideEndTime` INTEGER NOT NULL, `vehicleType` TEXT, `driverUid` TEXT, `customerUid` TEXT, `paymentMethod` TEXT, `pickUpLocationAddress` TEXT, `destinationLocationAddress` TEXT, `encodedPath` TEXT, `customerRatingByDriver` INTEGER NOT NULL, `driverRatingByCustomer` INTEGER NOT NULL, `rideStartTime` INTEGER NOT NULL, `distanceFair` REAL NOT NULL, `waitingTimeFair` REAL NOT NULL, `totalPayment` REAL NOT NULL, `totalRideDistance` REAL NOT NULL, `discount` REAL NOT NULL, `demandCharge` REAL NOT NULL, PRIMARY KEY(`rideId`), FOREIGN KEY(`driverUid`) REFERENCES `BasicInfo`(`driverUid`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "rideId",
+            "columnName": "rideId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rideEndTime",
+            "columnName": "rideEndTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleType",
+            "columnName": "vehicleType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driverUid",
+            "columnName": "driverUid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerUid",
+            "columnName": "customerUid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "paymentMethod",
+            "columnName": "paymentMethod",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pickUpLocationAddress",
+            "columnName": "pickUpLocationAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "destinationLocationAddress",
+            "columnName": "destinationLocationAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "encodedPath",
+            "columnName": "encodedPath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerRatingByDriver",
+            "columnName": "customerRatingByDriver",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driverRatingByCustomer",
+            "columnName": "driverRatingByCustomer",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rideStartTime",
+            "columnName": "rideStartTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distanceFair",
+            "columnName": "distanceFair",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waitingTimeFair",
+            "columnName": "waitingTimeFair",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalPayment",
+            "columnName": "totalPayment",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalRideDistance",
+            "columnName": "totalRideDistance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discount",
+            "columnName": "discount",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "demandCharge",
+            "columnName": "demandCharge",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rideId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_MoneyReceipt_rideId",
+            "unique": false,
+            "columnNames": [
+              "rideId"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_rideId` ON `${TABLE_NAME}` (`rideId`)"
+          },
+          {
+            "name": "index_MoneyReceipt_rideId_rideEndTime",
+            "unique": false,
+            "columnNames": [
+              "rideId",
+              "rideEndTime"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_rideId_rideEndTime` ON `${TABLE_NAME}` (`rideId`, `rideEndTime`)"
+          },
+          {
+            "name": "index_MoneyReceipt_driverUid",
+            "unique": false,
+            "columnNames": [
+              "driverUid"
+            ],
+            "createSql": "CREATE  INDEX `index_MoneyReceipt_driverUid` ON `${TABLE_NAME}` (`driverUid`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "BasicInfo",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "driverUid"
+            ],
+            "referencedColumns": [
+              "driverUid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "BasicInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`driverUid` TEXT NOT NULL, `vehicle_manufacturer` TEXT, `vehicle_model` TEXT, `vehicle_production_year` TEXT, `vehicle_registration_authority` TEXT, `vehicle_fitness_number` TEXT, `vehicle_registration_number` TEXT, `vehicle_tax_token_number` TEXT, `email` TEXT, `full_name` TEXT, `home_address` TEXT, `driving_license` TEXT, `nid` TEXT, `registration_city` TEXT, `vehicle_type` TEXT, `image` BLOB, `Bkash_Number` TEXT, PRIMARY KEY(`driverUid`))",
+        "fields": [
+          {
+            "fieldPath": "driverUid",
+            "columnName": "driverUid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicle_manufacturer",
+            "columnName": "vehicle_manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_model",
+            "columnName": "vehicle_model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_production_year",
+            "columnName": "vehicle_production_year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_registration_authority",
+            "columnName": "vehicle_registration_authority",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_fitness_number",
+            "columnName": "vehicle_fitness_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_registration_number",
+            "columnName": "vehicle_registration_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_tax_token_number",
+            "columnName": "vehicle_tax_token_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "full_name",
+            "columnName": "full_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "home_address",
+            "columnName": "home_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driving_license",
+            "columnName": "driving_license",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nid",
+            "columnName": "nid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "registration_city",
+            "columnName": "registration_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_type",
+            "columnName": "vehicle_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Bkash_Number",
+            "columnName": "Bkash_Number",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "driverUid"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"b0df470e493f75ba2764e93e141fdab4\")"
+    ]
+  }
+}
